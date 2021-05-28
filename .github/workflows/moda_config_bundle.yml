@@ -1,18 +1,14 @@
 name: Moda config bundle
 # Run this action on any pull request, push to the master branch
 on:
-  pull_request: {}
-  push:
-    branches:
-      - master
-      - enterprise-*.*-release
+  push: {}
 
 jobs:
-  run-some-code-woot:
+  create_moda_config_bundle:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
       - name: Run some code
         run: |
-          ruby hi.rb
+          ruby build_moda_config_bundle.rb
