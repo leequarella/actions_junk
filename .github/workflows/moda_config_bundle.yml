@@ -8,11 +8,11 @@ on:
       - enterprise-*.*-release
 
 jobs:
-  dependency-graph-api:
+  run-some-code-woot:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
       - name: Run some code
         run: |
-          ruby puts "HIII"
+          ruby hi.rb
